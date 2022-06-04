@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+let text = "Tworzenie stron internetowych";
+const myArray = text.split(" ");
+
+var cb = document.getElementById('demo');
+cb.innerHTML='';
+for (let i=0;i<text.length;i++)
+{
+    console.log(myArray[i]);
+
+    switch(i){
+        case 0:
+            cb.innerHTML=cb.innerHTML+'<span style="text-decoration: underline; margin-right: 10px; font-size:40px; font-weight:bold;">'+myArray[i].toUpperCase()+'</span>';
+            break;
+        case 1:
+            cb.innerHTML=cb.innerHTML+'<span style="border-bottom-style: double; margin-right: 10px; font-size:40px; font-weight:bold;">'+myArray[i].toUpperCase()+'</span>';
+            break;
+        default:
+            cb.innerHTML=cb.innerHTML+'<span style="text-decoration: underline; color: red; display: block; font-size:40px; font-weight:bold;">'+myArray[i].toUpperCase()+'</span>';
+            break;
+    }
+
+
+    
+}
+document.getElementById("demo").innerHTML = myArray; 
+</script>
+
+</body>
+</html>
